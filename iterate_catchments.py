@@ -29,12 +29,12 @@ for outflowpoint in outflowpoints.getFeatures():
                                         'METHOD':0,'CONVERGE':1.1,
                                         'AREA':TEMP_RASTER})
     #Polygonize raster catchment
-    catchpoly = processing.run("gdal:polygonize", {'INPUT':TEMP_RASTER,                                        'BAND':1,
+    catchpoly = processing.run("gdal:polygonize", {'INPUT':catchraster['AREA'],                                        'BAND':1,
                                         'FIELD':'DN',
                                         'EIGHT_CONNECTEDNESS':False,
                                         'OUTPUT':TEMP_VECTOR})
     #Select feature with DN = 100
-    result = processing.run("native:extractbyattribute", {'INPUT':TEMP_VECTOR,
+    result = processing.run("native:extractbyattribute", {'INPUT':catchpoly['OUTPUT'],
                                                  'FIELD':'DN',
                                                  'OPERATOR':0,
                                                  'VALUE':'100',
