@@ -31,18 +31,14 @@ __copyright__ = '(C) 2019 by Hans van der Kwast/IHE Delft'
 __revision__ = '$Format:%H$'
 
 from PyQt5.QtCore import QCoreApplication
-from qgis.core import (QgsProcessing,
-                       QgsFeatureSink,
-                       QgsProcessingAlgorithm,
-                       QgsProcessingParameterFeatureSource,
-                       QgsProcessingParameterFolderDestination,
-                       QgsProcessingParameterFeatureSink,
-                       QgsProcessingParameterPoint,
-                       QgsProcessingParameterRasterLayer,
-                       QgsProcessingParameterVectorLayer,
-                       QgsProcessingParameterRasterDestination,
-                       QgsVectorLayer,
-                       QgsVectorFileWriter)
+from qgis.core import (
+QgsVectorLayer,
+QgsProcessingAlgorithm,
+QgsProcessingParameterFolderDestination,
+QgsProcessingParameterRasterLayer,
+QgsProcessingParameterVectorLayer,
+QgsVectorFileWriter
+)
 import os
 import processing
 
@@ -65,7 +61,6 @@ class PointsToCatchmentsAlgorithm(QgsProcessingAlgorithm):
     # used when calling the algorithm from another algorithm, or when
     # calling from the QGIS console. 
 
-    OUTPUT = 'OUTPUT'
     OUTPUT_FOLDER = 'OUTPUT_FOLDER'
     INPUT_POINTS = 'INPUT_POINTS'
     INPUT_DEM = 'INPUT_DEM'
@@ -94,16 +89,6 @@ class PointsToCatchmentsAlgorithm(QgsProcessingAlgorithm):
             )
         )
 
-        # # We add a feature sink in which to store our processed features (this
-        # # usually takes the form of a newly created vector layer when the
-        # # algorithm is run in QGIS).
-        # self.addParameter(
-            # QgsProcessingParameterRasterDestination(
-                # self.OUTPUT,
-                # self.tr('Output catchments layer')
-            # )
-        # )
-        
         self.addParameter(QgsProcessingParameterFolderDestination(self.OUTPUT_FOLDER, self.tr("Output Folder"), None, False))
 
     def processAlgorithm(self, parameters, context, feedback):
@@ -112,59 +97,51 @@ class PointsToCatchmentsAlgorithm(QgsProcessingAlgorithm):
         """
 
         outflowPoints = self.parameterAsVectorLayer(parameters, self.INPUT_POINTS, context)
-        #print(outflowPoints)
-        #fileName, fileExtension = os.path.splitext(outflowPoints)
-        inputDEM = self.parameterAsRasterLayer(parameters, self.INPUT_DEM, context)
-        #fileNamePoints, fileExtensionPoints = os.path.splitext(outflowPoints)
-        #fileNameDEM, fileExtensionDEM =os.path.splitext(inputDEM)
-        #print (inputFile)
+        input_dem = self.parameterAsRasterLayer(parameters, self.INPUT_DEM, context)
+
         out_folder = self.parameterAsString(parameters, self.OUTPUT_FOLDER, context)
-        #Iterate over point features
-        i = 0
-        total = outflowPoints.featureCount()
-        print('Iterate over', total, 'points')
-        for outflowpoint in outflowPoints.getFeatures():
-            i = i + 1
-            #print(i)
-    
-            #Get x and y coordinate from point feature
-            geom = outflowpoint.geometry()
+
+        total_points = outflowPoints.featureCount()
+
+        # Iterate over point features
+        for i, pnt in enumerate(outflowPoints.getFeatures()):
+
+            # Get x and y coordinate from point feature
+            geom = pnt.geometry()
             p = geom.asPoint()
             x = p.x()
             y = p.y()
-            #print(x,y)
-    
+
+            feedback.pushInfo('Creating upslope area for point ({:.2f}, {:.2f}) - {} of {}'.format(
+                x, y, i + 1, total_points))
+            feedback.setProgress(i / total_points * 100.)
+
             # Calculate catchment raster from point feature
             catchraster = processing.run("saga:upslopearea", {'TARGET':None,
                                         'TARGET_PT_X':x,
                                         'TARGET_PT_Y':y,
-                                        'ELEVATION':inputDEM,
-                                        'SINKROUTE':None,
-                                        'METHOD':0,'CONVERGE':1.1,
+                                        'ELEVATION': input_dem,
+                                        'SINKROUTE': None,
+                                        'METHOD':0, 'CONVERGE':1.1,
                                         'AREA': 'TEMPORARY_OUTPUT'})
-            #Polygonize raster catchment
+
+            # Polygonize raster catchment
             catchpoly = processing.run("gdal:polygonize", {'INPUT':catchraster['AREA'],
                                         'BAND':1,
                                         'FIELD':'DN',
                                         'EIGHT_CONNECTEDNESS':False,
                                         'OUTPUT': 'TEMPORARY_OUTPUT'})
-                                        
+
+            # Select features having DN = 100 and export them to a SHP file
             catch_lyr = QgsVectorLayer(catchpoly['OUTPUT'], 'catchmments', 'ogr')
             catch_lyr.selectByExpression('"DN"=100')
-            catch_filename = os.path.join(out_folder, 'area_{}'.format(i))
-            QgsVectorFileWriter.writeAsVectorFormat(catch_lyr, catch_filename, onlySelected=True)
-                                        
-            # #Select feature with DN = 100
-            # result = processing.run("native:extractbyattribute", {'INPUT':catchpoly['OUTPUT'],
-                                    # 'FIELD':'DN',
-                                    # 'OPERATOR':0,
-                                    # 'VALUE':'100',
-                                    # 'OUTPUT':'memory:'})
-            #percentage = (i/total) * 100
-            #print('%.1f' % percentage, '% done\r'),
-            QgsProject.instance().addMapLayer(result['OUTPUT'])
-        return 
-        #{self.OUTPUT: dest_id}
+            catch_filename = os.path.join(out_folder, 'area_{}'.format(i + 1))
+            # Save only selected features (last argument is onlySelected = True)
+            QgsVectorFileWriter.writeAsVectorFormat(catch_lyr, catch_filename, 'UTF-8',
+                                                    outflowPoints.crs(), 'ESRI Shapefile', True)
+
+        feedback.setProgress(100)
+        return {self.OUTPUT_FOLDER: out_folder}
 
     def name(self):
         """
