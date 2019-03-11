@@ -40,7 +40,9 @@ from qgis.core import (QgsProcessing,
                        QgsProcessingParameterPoint,
                        QgsProcessingParameterRasterLayer,
                        QgsProcessingParameterVectorLayer,
-                       QgsProcessingParameterRasterDestination)
+                       QgsProcessingParameterRasterDestination,
+                       QgsVectorLayer,
+                       QgsVectorFileWriter)
 import os
 import processing
 
@@ -136,7 +138,7 @@ class PointsToCatchmentsAlgorithm(QgsProcessingAlgorithm):
             catchraster = processing.run("saga:upslopearea", {'TARGET':None,
                                         'TARGET_PT_X':x,
                                         'TARGET_PT_Y':y,
-                                        'ELEVATION':self.INPUT_DEM,
+                                        'ELEVATION':inputDEM,
                                         'SINKROUTE':None,
                                         'METHOD':0,'CONVERGE':1.1,
                                         'AREA': 'TEMPORARY_OUTPUT'})
@@ -161,7 +163,8 @@ class PointsToCatchmentsAlgorithm(QgsProcessingAlgorithm):
             #percentage = (i/total) * 100
             #print('%.1f' % percentage, '% done\r'),
             QgsProject.instance().addMapLayer(result['OUTPUT'])
-        return {self.OUTPUT: dest_id}
+        return 
+        #{self.OUTPUT: dest_id}
 
     def name(self):
         """
