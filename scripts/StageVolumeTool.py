@@ -24,19 +24,6 @@ import os
 
 
 class StageVolumeTool(QgsProcessingAlgorithm):
-    """
-    This is an example algorithm that takes a vector layer and
-    creates a new identical one.
-
-    It is meant to be used as an example of how to create your own
-    algorithms and explain methods and variables used to do it. An
-    algorithm like this will be available in all elements, and there
-    is not need for additional work.
-
-    All Processing algorithms should extend the QgsProcessingAlgorithm
-    class.
-    """
-
     # Constants used to refer to parameters and outputs. They will be
     # used when calling the algorithm from another algorithm, or when
     # calling from the QGIS console.
@@ -101,8 +88,7 @@ class StageVolumeTool(QgsProcessingAlgorithm):
         with some other properties.
         """
 
-        # We add the input vector features source. It can have any kind of
-        # geometry.
+        # We add the input DEM raster layer.
         self.addParameter(
             QgsProcessingParameterRasterLayer(
                 self.INPUT_DEM,
@@ -110,9 +96,7 @@ class StageVolumeTool(QgsProcessingAlgorithm):
             )
         )
 
-        # We add a feature sink in which to store our processed features (this
-        # usually takes the form of a newly created vector layer when the
-        # algorithm is run in QGIS).
+        # We add a vector layer destination (the DBF is considered a vector layer)
         self.addParameter(
             QgsProcessingParameterVectorDestination(
                 self.OUTPUT_DBF,
@@ -131,16 +115,14 @@ class StageVolumeTool(QgsProcessingAlgorithm):
         Here is where the processing itself takes place.
         """
 
-        # Retrieve the feature source and sink. The 'dest_id' variable is used
-        # to uniquely identify the feature sink, and must be included in the
-        # dictionary returned by the processAlgorithm function.
+
         demLayer = self.parameterAsRasterLayer(
             parameters,
             self.INPUT_DEM,
             context
         )
 
-        # If source was not found, throw an exception to indicate that the algorithm
+        # If DEM layer was not found, throw an exception to indicate that the algorithm
         # encountered a fatal error. The exception text can be any string, but in this
         # case we use the pre-built invalidSourceError method to return a standard
         # helper text for when a source cannot be evaluated
@@ -154,7 +136,7 @@ class StageVolumeTool(QgsProcessingAlgorithm):
         )
 
 
-        # If sink was not created, throw an exception to indicate that the algorithm
+        # If output DBF was not created, throw an exception to indicate that the algorithm
         # encountered a fatal error. The exception text can be any string, but in this
         # case we use the pre-built invalidSinkError method to return a standard
         # helper text for when a sink cannot be evaluated
@@ -163,11 +145,7 @@ class StageVolumeTool(QgsProcessingAlgorithm):
 
 
 
-        # To run another Processing algorithm as part of this algorithm, you can use
-        # processing.run(...). Make sure you pass the current context and feedback
-        # to processing.run to ensure that all temporary layer outputs are available
-        # to the executed algorithm, and that the executed algorithm can send feedback
-        # reports to the user (and correctly handle cancellation and progress reports!)
+        # Run the script
         stats = demLayer.dataProvider().bandStatistics(1)
         demMinimum = stats.minimumValue
         demMaximum = stats.maximumValue
@@ -212,11 +190,6 @@ class StageVolumeTool(QgsProcessingAlgorithm):
                                                     'OUTPUT':outDBF
                                                     })
 
-        # Return the results of the algorithm. In this case our only result is
-        # the feature sink which contains the processed features, but some
-        # algorithms may return multiple feature sinks, calculated numeric
-        # statistics, etc. These should all be included in the returned
-        # dictionary, with keys matching the feature corresponding parameter
-        # or output names.
+        # Return the results of the algorithm.
         outFile = os.path.splitext(outDBF)[0]+".dbf"
         return {self.OUTPUT_DBF: outFile}
