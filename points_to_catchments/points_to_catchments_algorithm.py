@@ -40,7 +40,7 @@ QgsProcessingParameterVectorLayer,
 QgsVectorFileWriter
 )
 import os
-import processing
+from qgis import processing
 
 
 class PointsToCatchmentsAlgorithm(QgsProcessingAlgorithm):
@@ -65,7 +65,7 @@ class PointsToCatchmentsAlgorithm(QgsProcessingAlgorithm):
     INPUT_POINTS = 'INPUT_POINTS'
     INPUT_DEM = 'INPUT_DEM'
 
-    def initAlgorithm(self, config):
+    def initAlgorithm(self, config=None):
         """
         Here we define the inputs and output of the algorithm, along
         with some other properties.
