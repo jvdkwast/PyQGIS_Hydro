@@ -5,9 +5,22 @@
       <Option type="bool" value="true" name="active"/>
       <Option name="alg_config"/>
       <Option type="QString" value="gdal:buildvirtualraster" name="alg_id"/>
+      <Option type="QString" value="" name="color"/>
+      <Option type="Map" name="comment">
+        <Option type="QString" value="" name="color"/>
+        <Option type="QString" value="" name="component_description"/>
+        <Option type="double" value="30" name="component_height"/>
+        <Option type="double" value="0" name="component_pos_x"/>
+        <Option type="double" value="0" name="component_pos_y"/>
+        <Option type="double" value="200" name="component_width"/>
+        <Option type="bool" value="false" name="outputs_collapsed"/>
+        <Option type="bool" value="false" name="parameters_collapsed"/>
+      </Option>
       <Option type="QString" value="Mosaic DEM Tiles" name="component_description"/>
+      <Option type="double" value="30" name="component_height"/>
       <Option type="double" value="120" name="component_pos_x"/>
       <Option type="double" value="160" name="component_pos_y"/>
+      <Option type="double" value="200" name="component_width"/>
       <Option name="dependencies"/>
       <Option type="QString" value="gdal:buildvirtualraster_1" name="id"/>
       <Option name="outputs"/>
@@ -74,9 +87,22 @@
       <Option type="bool" value="true" name="active"/>
       <Option name="alg_config"/>
       <Option type="QString" value="gdal:fillnodata" name="alg_id"/>
+      <Option type="QString" value="" name="color"/>
+      <Option type="Map" name="comment">
+        <Option type="QString" value="" name="color"/>
+        <Option type="QString" value="" name="component_description"/>
+        <Option type="double" value="30" name="component_height"/>
+        <Option type="double" value="0" name="component_pos_x"/>
+        <Option type="double" value="0" name="component_pos_y"/>
+        <Option type="double" value="200" name="component_width"/>
+        <Option type="bool" value="false" name="outputs_collapsed"/>
+        <Option type="bool" value="false" name="parameters_collapsed"/>
+      </Option>
       <Option type="QString" value="Fill voids in DEM" name="component_description"/>
+      <Option type="double" value="30" name="component_height"/>
       <Option type="double" value="560" name="component_pos_x"/>
       <Option type="double" value="360" name="component_pos_y"/>
+      <Option type="double" value="200" name="component_width"/>
       <Option name="dependencies"/>
       <Option type="QString" value="gdal:fillnodata_1" name="id"/>
       <Option name="outputs"/>
@@ -138,9 +164,22 @@
       <Option type="bool" value="true" name="active"/>
       <Option name="alg_config"/>
       <Option type="QString" value="gdal:warpreproject" name="alg_id"/>
+      <Option type="QString" value="" name="color"/>
+      <Option type="Map" name="comment">
+        <Option type="QString" value="" name="color"/>
+        <Option type="QString" value="" name="component_description"/>
+        <Option type="double" value="30" name="component_height"/>
+        <Option type="double" value="0" name="component_pos_x"/>
+        <Option type="double" value="0" name="component_pos_y"/>
+        <Option type="double" value="200" name="component_width"/>
+        <Option type="bool" value="false" name="outputs_collapsed"/>
+        <Option type="bool" value="false" name="parameters_collapsed"/>
+      </Option>
       <Option type="QString" value="Reproject and clip DEM" name="component_description"/>
+      <Option type="double" value="30" name="component_height"/>
       <Option type="double" value="340" name="component_pos_x"/>
       <Option type="double" value="260" name="component_pos_y"/>
+      <Option type="double" value="200" name="component_width"/>
       <Option name="dependencies"/>
       <Option type="QString" value="gdal:warpreproject_1" name="id"/>
       <Option name="outputs"/>
@@ -226,21 +265,49 @@
       <Option type="bool" value="true" name="active"/>
       <Option name="alg_config"/>
       <Option type="QString" value="qgis:exportaddgeometrycolumns" name="alg_id"/>
+      <Option type="QString" value="" name="color"/>
+      <Option type="Map" name="comment">
+        <Option type="QString" value="" name="color"/>
+        <Option type="QString" value="" name="component_description"/>
+        <Option type="double" value="30" name="component_height"/>
+        <Option type="double" value="0" name="component_pos_x"/>
+        <Option type="double" value="0" name="component_pos_y"/>
+        <Option type="double" value="200" name="component_width"/>
+        <Option type="bool" value="false" name="outputs_collapsed"/>
+        <Option type="bool" value="false" name="parameters_collapsed"/>
+      </Option>
       <Option type="QString" value="Save outlet with coordinates" name="component_description"/>
+      <Option type="double" value="30" name="component_height"/>
       <Option type="double" value="1078" name="component_pos_x"/>
       <Option type="double" value="338" name="component_pos_y"/>
+      <Option type="double" value="200" name="component_width"/>
       <Option name="dependencies"/>
       <Option type="QString" value="qgis:exportaddgeometrycolumns_1" name="id"/>
       <Option type="Map" name="outputs">
         <Option type="Map" name="Snapped outlet">
           <Option type="QString" value="qgis:exportaddgeometrycolumns_1" name="child_id"/>
+          <Option type="QString" value="" name="color"/>
+          <Option type="Map" name="comment">
+            <Option type="QString" value="" name="color"/>
+            <Option type="QString" value="" name="component_description"/>
+            <Option type="double" value="30" name="component_height"/>
+            <Option type="double" value="0" name="component_pos_x"/>
+            <Option type="double" value="0" name="component_pos_y"/>
+            <Option type="double" value="200" name="component_width"/>
+            <Option type="bool" value="false" name="outputs_collapsed"/>
+            <Option type="bool" value="false" name="parameters_collapsed"/>
+          </Option>
           <Option type="QString" value="Snapped outlet" name="component_description"/>
+          <Option type="double" value="30" name="component_height"/>
           <Option type="double" value="1089" name="component_pos_x"/>
           <Option type="double" value="439" name="component_pos_y"/>
+          <Option type="double" value="200" name="component_width"/>
           <Option type="invalid" name="default_value"/>
           <Option type="bool" value="false" name="mandatory"/>
           <Option type="QString" value="Snapped outlet" name="name"/>
           <Option type="QString" value="OUTPUT" name="output_name"/>
+          <Option type="bool" value="false" name="outputs_collapsed"/>
+          <Option type="bool" value="false" name="parameters_collapsed"/>
         </Option>
       </Option>
       <Option type="bool" value="true" name="outputs_collapsed"/>
@@ -265,9 +332,22 @@
       <Option type="bool" value="true" name="active"/>
       <Option name="alg_config"/>
       <Option type="QString" value="qgis:snapgeometries" name="alg_id"/>
+      <Option type="QString" value="" name="color"/>
+      <Option type="Map" name="comment">
+        <Option type="QString" value="" name="color"/>
+        <Option type="QString" value="" name="component_description"/>
+        <Option type="double" value="30" name="component_height"/>
+        <Option type="double" value="0" name="component_pos_x"/>
+        <Option type="double" value="0" name="component_pos_y"/>
+        <Option type="double" value="200" name="component_width"/>
+        <Option type="bool" value="false" name="outputs_collapsed"/>
+        <Option type="bool" value="false" name="parameters_collapsed"/>
+      </Option>
       <Option type="QString" value="Snap pour point" name="component_description"/>
+      <Option type="double" value="30" name="component_height"/>
       <Option type="double" value="920" name="component_pos_x"/>
       <Option type="double" value="229" name="component_pos_y"/>
+      <Option type="double" value="200" name="component_width"/>
       <Option name="dependencies"/>
       <Option type="QString" value="qgis:snapgeometries_1" name="id"/>
       <Option name="outputs"/>
@@ -305,21 +385,49 @@
       <Option type="bool" value="true" name="active"/>
       <Option name="alg_config"/>
       <Option type="QString" value="saga:channelnetworkanddrainagebasins" name="alg_id"/>
+      <Option type="QString" value="" name="color"/>
+      <Option type="Map" name="comment">
+        <Option type="QString" value="" name="color"/>
+        <Option type="QString" value="" name="component_description"/>
+        <Option type="double" value="30" name="component_height"/>
+        <Option type="double" value="0" name="component_pos_x"/>
+        <Option type="double" value="0" name="component_pos_y"/>
+        <Option type="double" value="200" name="component_width"/>
+        <Option type="bool" value="false" name="outputs_collapsed"/>
+        <Option type="bool" value="false" name="parameters_collapsed"/>
+      </Option>
       <Option type="QString" value="Channel network and drainage basins" name="component_description"/>
+      <Option type="double" value="30" name="component_height"/>
       <Option type="double" value="1000" name="component_pos_x"/>
       <Option type="double" value="560" name="component_pos_y"/>
+      <Option type="double" value="200" name="component_width"/>
       <Option name="dependencies"/>
       <Option type="QString" value="saga:channelnetworkanddrainagebasins_1" name="id"/>
       <Option type="Map" name="outputs">
         <Option type="Map" name="Streams">
           <Option type="QString" value="saga:channelnetworkanddrainagebasins_1" name="child_id"/>
+          <Option type="QString" value="" name="color"/>
+          <Option type="Map" name="comment">
+            <Option type="QString" value="" name="color"/>
+            <Option type="QString" value="" name="component_description"/>
+            <Option type="double" value="30" name="component_height"/>
+            <Option type="double" value="0" name="component_pos_x"/>
+            <Option type="double" value="0" name="component_pos_y"/>
+            <Option type="double" value="200" name="component_width"/>
+            <Option type="bool" value="false" name="outputs_collapsed"/>
+            <Option type="bool" value="false" name="parameters_collapsed"/>
+          </Option>
           <Option type="QString" value="Streams" name="component_description"/>
+          <Option type="double" value="30" name="component_height"/>
           <Option type="double" value="1001" name="component_pos_x"/>
           <Option type="double" value="650" name="component_pos_y"/>
+          <Option type="double" value="200" name="component_width"/>
           <Option type="invalid" name="default_value"/>
           <Option type="bool" value="false" name="mandatory"/>
           <Option type="QString" value="Streams" name="name"/>
           <Option type="QString" value="SEGMENTS" name="output_name"/>
+          <Option type="bool" value="false" name="outputs_collapsed"/>
+          <Option type="bool" value="false" name="parameters_collapsed"/>
         </Option>
       </Option>
       <Option type="bool" value="true" name="outputs_collapsed"/>
@@ -344,21 +452,49 @@
       <Option type="bool" value="true" name="active"/>
       <Option name="alg_config"/>
       <Option type="QString" value="saga:fillsinkswangliu" name="alg_id"/>
+      <Option type="QString" value="" name="color"/>
+      <Option type="Map" name="comment">
+        <Option type="QString" value="" name="color"/>
+        <Option type="QString" value="" name="component_description"/>
+        <Option type="double" value="30" name="component_height"/>
+        <Option type="double" value="0" name="component_pos_x"/>
+        <Option type="double" value="0" name="component_pos_y"/>
+        <Option type="double" value="200" name="component_width"/>
+        <Option type="bool" value="false" name="outputs_collapsed"/>
+        <Option type="bool" value="false" name="parameters_collapsed"/>
+      </Option>
       <Option type="QString" value="Fill sinks (wang &amp; liu)" name="component_description"/>
+      <Option type="double" value="30" name="component_height"/>
       <Option type="double" value="780" name="component_pos_x"/>
       <Option type="double" value="460" name="component_pos_y"/>
+      <Option type="double" value="200" name="component_width"/>
       <Option name="dependencies"/>
       <Option type="QString" value="saga:fillsinkswangliu_1" name="id"/>
       <Option type="Map" name="outputs">
         <Option type="Map" name="Filled DEM">
           <Option type="QString" value="saga:fillsinkswangliu_1" name="child_id"/>
+          <Option type="QString" value="" name="color"/>
+          <Option type="Map" name="comment">
+            <Option type="QString" value="" name="color"/>
+            <Option type="QString" value="" name="component_description"/>
+            <Option type="double" value="30" name="component_height"/>
+            <Option type="double" value="0" name="component_pos_x"/>
+            <Option type="double" value="0" name="component_pos_y"/>
+            <Option type="double" value="200" name="component_width"/>
+            <Option type="bool" value="false" name="outputs_collapsed"/>
+            <Option type="bool" value="false" name="parameters_collapsed"/>
+          </Option>
           <Option type="QString" value="Filled DEM" name="component_description"/>
+          <Option type="double" value="30" name="component_height"/>
           <Option type="double" value="782" name="component_pos_x"/>
           <Option type="double" value="561" name="component_pos_y"/>
+          <Option type="double" value="200" name="component_width"/>
           <Option type="invalid" name="default_value"/>
           <Option type="bool" value="false" name="mandatory"/>
           <Option type="QString" value="Filled DEM" name="name"/>
           <Option type="QString" value="FILLED" name="output_name"/>
+          <Option type="bool" value="false" name="outputs_collapsed"/>
+          <Option type="bool" value="false" name="parameters_collapsed"/>
         </Option>
       </Option>
       <Option type="bool" value="true" name="outputs_collapsed"/>
@@ -380,7 +516,24 @@
       </Option>
     </Option>
   </Option>
-  <Option name="help"/>
+  <Option name="designerParameterValues"/>
+  <Option name="groupBoxes"/>
+  <Option type="Map" name="help">
+    <Option type="QString" value="Hans van der Kwast" name="ALG_CREATOR"/>
+    <Option type="QString" value="Delineates streams from a DEM using the Strahler order method and snaps a defined outlet to the delineated stream. The results can be used in the catchment delineation model." name="ALG_DESC"/>
+    <Option type="QString" value="Hans van der Kwast" name="ALG_HELP_CREATOR"/>
+    <Option type="QString" value="1.0" name="ALG_VERSION"/>
+    <Option type="QString" value="https://courses.gisopencourseware.org/mod/book/view.php?id=56&#xa;https://youtu.be/BKdJMGXgOzg" name="HELP_URL"/>
+    <Option type="QString" value="" name="SHORT_DESCRIPTION"/>
+    <Option type="QString" value="Polyogon with the extent of the study area" name="boundingbox"/>
+    <Option type="QString" value="Digital Elevation Model tiles (for example SRTM)" name="demtiles"/>
+    <Option type="QString" value="Point layer with the outlet." name="outletonmap"/>
+    <Option type="QString" value="Point layer with the snapped pour point." name="qgis:exportaddgeometrycolumns_1:Snapped outlet"/>
+    <Option type="QString" value="Delineated streams as line vector" name="saga:channelnetworkanddrainagebasins_1:Streams"/>
+    <Option type="QString" value="DEM filled with Wang &amp; Liu algorithm, clipped and reprojected to the bounding box properties." name="saga:fillsinkswangliu_1:Filled DEM"/>
+    <Option type="QString" value="Strahler orders >= this threshold will be considered as streams" name="strahlerorderthreshold"/>
+    <Option type="QString" value="Tolerance for snapping the outlet point to the delineated stream" name="tolerance"/>
+  </Option>
   <Option name="modelVariables"/>
   <Option type="QString" value="Hydrology" name="model_group"/>
   <Option type="QString" value="Stream Delineation" name="model_name"/>
@@ -390,16 +543,20 @@
         <Option type="int" value="2"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option type="QString" value="Bounding box" name="description"/>
       <Option type="int" value="0" name="flags"/>
+      <Option type="QString" value="" name="help"/>
       <Option name="metadata"/>
       <Option type="QString" value="boundingbox" name="name"/>
       <Option type="QString" value="vector" name="parameter_type"/>
     </Option>
     <Option type="Map" name="demtiles">
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option type="QString" value="DEM Tiles" name="description"/>
       <Option type="int" value="0" name="flags"/>
+      <Option type="QString" value="" name="help"/>
       <Option type="int" value="3" name="layer_type"/>
       <Option name="metadata"/>
       <Option type="int" value="0" name="min_inputs"/>
@@ -411,8 +568,10 @@
         <Option type="int" value="0"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option type="QString" value="Outlet on map" name="description"/>
       <Option type="int" value="0" name="flags"/>
+      <Option type="QString" value="" name="help"/>
       <Option name="metadata"/>
       <Option type="QString" value="outletonmap" name="name"/>
       <Option type="QString" value="vector" name="parameter_type"/>
@@ -421,19 +580,24 @@
       <Option type="bool" value="true" name="create_by_default"/>
       <Option type="int" value="-1" name="data_type"/>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option type="QString" value="Snapped outlet" name="description"/>
       <Option type="int" value="0" name="flags"/>
+      <Option type="QString" value="" name="help"/>
       <Option name="metadata"/>
       <Option type="QString" value="qgis:exportaddgeometrycolumns_1:Snapped outlet" name="name"/>
       <Option type="QString" value="sink" name="parameter_type"/>
+      <Option type="bool" value="false" name="supports_append"/>
       <Option type="bool" value="true" name="supports_non_file_outputs"/>
     </Option>
     <Option type="Map" name="saga:channelnetworkanddrainagebasins_1:Streams">
       <Option type="bool" value="true" name="create_by_default"/>
       <Option type="int" value="-1" name="data_type"/>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option type="QString" value="Streams" name="description"/>
       <Option type="int" value="0" name="flags"/>
+      <Option type="QString" value="" name="help"/>
       <Option name="metadata"/>
       <Option type="QString" value="saga:channelnetworkanddrainagebasins_1:Streams" name="name"/>
       <Option type="QString" value="vectorDestination" name="parameter_type"/>
@@ -442,8 +606,10 @@
     <Option type="Map" name="saga:fillsinkswangliu_1:Filled DEM">
       <Option type="bool" value="true" name="create_by_default"/>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option type="QString" value="Filled DEM" name="description"/>
       <Option type="int" value="0" name="flags"/>
+      <Option type="QString" value="" name="help"/>
       <Option name="metadata"/>
       <Option type="QString" value="saga:fillsinkswangliu_1:Filled DEM" name="name"/>
       <Option type="QString" value="rasterDestination" name="parameter_type"/>
@@ -452,8 +618,10 @@
     <Option type="Map" name="strahlerorderthreshold">
       <Option type="int" value="0" name="data_type"/>
       <Option type="QString" value="8" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option type="QString" value="Strahler order threshold" name="description"/>
       <Option type="int" value="0" name="flags"/>
+      <Option type="QString" value="" name="help"/>
       <Option type="double" value="20" name="max"/>
       <Option name="metadata"/>
       <Option type="double" value="1" name="min"/>
@@ -463,8 +631,10 @@
     <Option type="Map" name="tolerance">
       <Option type="int" value="1" name="data_type"/>
       <Option type="QString" value="100" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option type="QString" value="Tolerance" name="description"/>
       <Option type="int" value="0" name="flags"/>
+      <Option type="QString" value="" name="help"/>
       <Option type="double" value="5000" name="max"/>
       <Option name="metadata"/>
       <Option type="double" value="30" name="min"/>
@@ -472,36 +642,112 @@
       <Option type="QString" value="number" name="parameter_type"/>
     </Option>
   </Option>
+  <Option name="parameterOrder"/>
   <Option type="Map" name="parameters">
     <Option type="Map" name="boundingbox">
+      <Option type="QString" value="" name="color"/>
+      <Option type="Map" name="comment">
+        <Option type="QString" value="" name="color"/>
+        <Option type="QString" value="" name="component_description"/>
+        <Option type="double" value="30" name="component_height"/>
+        <Option type="double" value="0" name="component_pos_x"/>
+        <Option type="double" value="0" name="component_pos_y"/>
+        <Option type="double" value="200" name="component_width"/>
+        <Option type="bool" value="false" name="outputs_collapsed"/>
+        <Option type="bool" value="false" name="parameters_collapsed"/>
+      </Option>
       <Option type="QString" value="boundingbox" name="component_description"/>
+      <Option type="double" value="30" name="component_height"/>
       <Option type="double" value="340" name="component_pos_x"/>
       <Option type="double" value="60" name="component_pos_y"/>
+      <Option type="double" value="200" name="component_width"/>
       <Option type="QString" value="boundingbox" name="name"/>
+      <Option type="bool" value="false" name="outputs_collapsed"/>
+      <Option type="bool" value="false" name="parameters_collapsed"/>
     </Option>
     <Option type="Map" name="demtiles">
+      <Option type="QString" value="" name="color"/>
+      <Option type="Map" name="comment">
+        <Option type="QString" value="" name="color"/>
+        <Option type="QString" value="" name="component_description"/>
+        <Option type="double" value="30" name="component_height"/>
+        <Option type="double" value="0" name="component_pos_x"/>
+        <Option type="double" value="0" name="component_pos_y"/>
+        <Option type="double" value="200" name="component_width"/>
+        <Option type="bool" value="false" name="outputs_collapsed"/>
+        <Option type="bool" value="false" name="parameters_collapsed"/>
+      </Option>
       <Option type="QString" value="demtiles" name="component_description"/>
+      <Option type="double" value="30" name="component_height"/>
       <Option type="double" value="120" name="component_pos_x"/>
       <Option type="double" value="60" name="component_pos_y"/>
+      <Option type="double" value="200" name="component_width"/>
       <Option type="QString" value="demtiles" name="name"/>
+      <Option type="bool" value="false" name="outputs_collapsed"/>
+      <Option type="bool" value="false" name="parameters_collapsed"/>
     </Option>
     <Option type="Map" name="outletonmap">
+      <Option type="QString" value="" name="color"/>
+      <Option type="Map" name="comment">
+        <Option type="QString" value="" name="color"/>
+        <Option type="QString" value="" name="component_description"/>
+        <Option type="double" value="30" name="component_height"/>
+        <Option type="double" value="0" name="component_pos_x"/>
+        <Option type="double" value="0" name="component_pos_y"/>
+        <Option type="double" value="200" name="component_width"/>
+        <Option type="bool" value="false" name="outputs_collapsed"/>
+        <Option type="bool" value="false" name="parameters_collapsed"/>
+      </Option>
       <Option type="QString" value="outletonmap" name="component_description"/>
+      <Option type="double" value="30" name="component_height"/>
       <Option type="double" value="780" name="component_pos_x"/>
       <Option type="double" value="60" name="component_pos_y"/>
+      <Option type="double" value="200" name="component_width"/>
       <Option type="QString" value="outletonmap" name="name"/>
+      <Option type="bool" value="false" name="outputs_collapsed"/>
+      <Option type="bool" value="false" name="parameters_collapsed"/>
     </Option>
     <Option type="Map" name="strahlerorderthreshold">
+      <Option type="QString" value="" name="color"/>
+      <Option type="Map" name="comment">
+        <Option type="QString" value="" name="color"/>
+        <Option type="QString" value="" name="component_description"/>
+        <Option type="double" value="30" name="component_height"/>
+        <Option type="double" value="0" name="component_pos_x"/>
+        <Option type="double" value="0" name="component_pos_y"/>
+        <Option type="double" value="200" name="component_width"/>
+        <Option type="bool" value="false" name="outputs_collapsed"/>
+        <Option type="bool" value="false" name="parameters_collapsed"/>
+      </Option>
       <Option type="QString" value="strahlerorderthreshold" name="component_description"/>
+      <Option type="double" value="30" name="component_height"/>
       <Option type="double" value="560" name="component_pos_x"/>
       <Option type="double" value="60" name="component_pos_y"/>
+      <Option type="double" value="200" name="component_width"/>
       <Option type="QString" value="strahlerorderthreshold" name="name"/>
+      <Option type="bool" value="false" name="outputs_collapsed"/>
+      <Option type="bool" value="false" name="parameters_collapsed"/>
     </Option>
     <Option type="Map" name="tolerance">
+      <Option type="QString" value="" name="color"/>
+      <Option type="Map" name="comment">
+        <Option type="QString" value="" name="color"/>
+        <Option type="QString" value="" name="component_description"/>
+        <Option type="double" value="30" name="component_height"/>
+        <Option type="double" value="0" name="component_pos_x"/>
+        <Option type="double" value="0" name="component_pos_y"/>
+        <Option type="double" value="200" name="component_width"/>
+        <Option type="bool" value="false" name="outputs_collapsed"/>
+        <Option type="bool" value="false" name="parameters_collapsed"/>
+      </Option>
       <Option type="QString" value="tolerance" name="component_description"/>
+      <Option type="double" value="30" name="component_height"/>
       <Option type="double" value="1000" name="component_pos_x"/>
       <Option type="double" value="60" name="component_pos_y"/>
+      <Option type="double" value="200" name="component_width"/>
       <Option type="QString" value="tolerance" name="name"/>
+      <Option type="bool" value="false" name="outputs_collapsed"/>
+      <Option type="bool" value="false" name="parameters_collapsed"/>
     </Option>
   </Option>
 </Option>
