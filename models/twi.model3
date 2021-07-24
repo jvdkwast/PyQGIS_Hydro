@@ -2,251 +2,361 @@
 <Option type="Map">
   <Option type="Map" name="children">
     <Option type="Map" name="qgis:rastercalculator_1">
-      <Option value="true" type="bool" name="active"/>
+      <Option type="bool" name="active" value="true"/>
       <Option name="alg_config"/>
-      <Option value="qgis:rastercalculator" type="QString" name="alg_id"/>
-      <Option value="Correct slopes" type="QString" name="component_description"/>
-      <Option value="394" type="double" name="component_pos_x"/>
-      <Option value="341" type="double" name="component_pos_y"/>
+      <Option type="QString" name="alg_id" value="qgis:rastercalculator"/>
+      <Option type="QString" name="color" value=""/>
+      <Option type="Map" name="comment">
+        <Option type="QString" name="color" value=""/>
+        <Option type="QString" name="component_description" value=""/>
+        <Option type="double" name="component_height" value="30"/>
+        <Option type="double" name="component_pos_x" value="0"/>
+        <Option type="double" name="component_pos_y" value="0"/>
+        <Option type="double" name="component_width" value="200"/>
+        <Option type="bool" name="outputs_collapsed" value="false"/>
+        <Option type="bool" name="parameters_collapsed" value="false"/>
+      </Option>
+      <Option type="QString" name="component_description" value="Correct slopes"/>
+      <Option type="double" name="component_height" value="30"/>
+      <Option type="double" name="component_pos_x" value="394"/>
+      <Option type="double" name="component_pos_y" value="341"/>
+      <Option type="double" name="component_width" value="200"/>
       <Option name="dependencies"/>
-      <Option value="qgis:rastercalculator_1" type="QString" name="id"/>
+      <Option type="QString" name="id" value="qgis:rastercalculator_1"/>
       <Option name="outputs"/>
-      <Option value="true" type="bool" name="outputs_collapsed"/>
-      <Option value="true" type="bool" name="parameters_collapsed"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
       <Option type="Map" name="params">
         <Option type="List" name="CELLSIZE">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option value="0" type="double" name="static_value"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="double" name="static_value" value="0"/>
           </Option>
         </Option>
         <Option type="List" name="CRS">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
+            <Option type="int" name="source" value="2"/>
             <Option type="invalid" name="static_value"/>
           </Option>
         </Option>
         <Option type="List" name="EXPRESSION">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option value=" ( &quot;'Slope' from algorithm 'Slope'@1&quot; &lt;= 0 )  * 1 +  ( &quot;'Slope' from algorithm 'Slope'@1&quot; > 0 )  * &quot;'Slope' from algorithm 'Slope'@1&quot;" type="QString" name="static_value"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value=" ( &quot;'Slope' from algorithm 'Slope'@1&quot; &lt;= 0 )  * 1 +  ( &quot;'Slope' from algorithm 'Slope'@1&quot; > 0 )  * &quot;'Slope' from algorithm 'Slope'@1&quot;"/>
           </Option>
         </Option>
         <Option type="List" name="EXTENT">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
+            <Option type="int" name="source" value="2"/>
             <Option type="invalid" name="static_value"/>
           </Option>
         </Option>
         <Option type="List" name="LAYERS">
           <Option type="Map">
-            <Option value="qgis:slope_1" type="QString" name="child_id"/>
-            <Option value="OUTPUT" type="QString" name="output_name"/>
-            <Option value="1" type="int" name="source"/>
+            <Option type="QString" name="child_id" value="qgis:slope_1"/>
+            <Option type="QString" name="output_name" value="OUTPUT"/>
+            <Option type="int" name="source" value="1"/>
           </Option>
         </Option>
       </Option>
     </Option>
     <Option type="Map" name="qgis:rastercalculator_2">
-      <Option value="true" type="bool" name="active"/>
+      <Option type="bool" name="active" value="true"/>
       <Option name="alg_config"/>
-      <Option value="qgis:rastercalculator" type="QString" name="alg_id"/>
-      <Option value="Convert degrees to radiance" type="QString" name="component_description"/>
-      <Option value="614" type="double" name="component_pos_x"/>
-      <Option value="441" type="double" name="component_pos_y"/>
+      <Option type="QString" name="alg_id" value="qgis:rastercalculator"/>
+      <Option type="QString" name="color" value=""/>
+      <Option type="Map" name="comment">
+        <Option type="QString" name="color" value=""/>
+        <Option type="QString" name="component_description" value=""/>
+        <Option type="double" name="component_height" value="30"/>
+        <Option type="double" name="component_pos_x" value="0"/>
+        <Option type="double" name="component_pos_y" value="0"/>
+        <Option type="double" name="component_width" value="200"/>
+        <Option type="bool" name="outputs_collapsed" value="false"/>
+        <Option type="bool" name="parameters_collapsed" value="false"/>
+      </Option>
+      <Option type="QString" name="component_description" value="Convert degrees to radiance"/>
+      <Option type="double" name="component_height" value="30"/>
+      <Option type="double" name="component_pos_x" value="614"/>
+      <Option type="double" name="component_pos_y" value="441"/>
+      <Option type="double" name="component_width" value="200"/>
       <Option name="dependencies"/>
-      <Option value="qgis:rastercalculator_2" type="QString" name="id"/>
+      <Option type="QString" name="id" value="qgis:rastercalculator_2"/>
       <Option name="outputs"/>
-      <Option value="true" type="bool" name="outputs_collapsed"/>
-      <Option value="true" type="bool" name="parameters_collapsed"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
       <Option type="Map" name="params">
         <Option type="List" name="CELLSIZE">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option value="0" type="double" name="static_value"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="double" name="static_value" value="0"/>
           </Option>
         </Option>
         <Option type="List" name="CRS">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
+            <Option type="int" name="source" value="2"/>
             <Option type="invalid" name="static_value"/>
           </Option>
         </Option>
         <Option type="List" name="EXPRESSION">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option value="&quot;'Output' from algorithm 'Correct slopes'@1&quot; * 0.01745" type="QString" name="static_value"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="&quot;'Output' from algorithm 'Correct slopes'@1&quot; * 0.01745"/>
           </Option>
         </Option>
         <Option type="List" name="EXTENT">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
+            <Option type="int" name="source" value="2"/>
             <Option type="invalid" name="static_value"/>
           </Option>
         </Option>
         <Option type="List" name="LAYERS">
           <Option type="Map">
-            <Option value="qgis:rastercalculator_1" type="QString" name="child_id"/>
-            <Option value="OUTPUT" type="QString" name="output_name"/>
-            <Option value="1" type="int" name="source"/>
+            <Option type="QString" name="child_id" value="qgis:rastercalculator_1"/>
+            <Option type="QString" name="output_name" value="OUTPUT"/>
+            <Option type="int" name="source" value="1"/>
           </Option>
         </Option>
       </Option>
     </Option>
     <Option type="Map" name="qgis:rastercalculator_3">
-      <Option value="true" type="bool" name="active"/>
+      <Option type="bool" name="active" value="true"/>
       <Option name="alg_config"/>
-      <Option value="qgis:rastercalculator" type="QString" name="alg_id"/>
-      <Option value="Calculate TWI" type="QString" name="component_description"/>
-      <Option value="911" type="double" name="component_pos_x"/>
-      <Option value="541" type="double" name="component_pos_y"/>
+      <Option type="QString" name="alg_id" value="qgis:rastercalculator"/>
+      <Option type="QString" name="color" value=""/>
+      <Option type="Map" name="comment">
+        <Option type="QString" name="color" value=""/>
+        <Option type="QString" name="component_description" value=""/>
+        <Option type="double" name="component_height" value="30"/>
+        <Option type="double" name="component_pos_x" value="0"/>
+        <Option type="double" name="component_pos_y" value="0"/>
+        <Option type="double" name="component_width" value="200"/>
+        <Option type="bool" name="outputs_collapsed" value="false"/>
+        <Option type="bool" name="parameters_collapsed" value="false"/>
+      </Option>
+      <Option type="QString" name="component_description" value="Calculate TWI"/>
+      <Option type="double" name="component_height" value="30"/>
+      <Option type="double" name="component_pos_x" value="911"/>
+      <Option type="double" name="component_pos_y" value="541"/>
+      <Option type="double" name="component_width" value="200"/>
       <Option name="dependencies"/>
-      <Option value="qgis:rastercalculator_3" type="QString" name="id"/>
+      <Option type="QString" name="id" value="qgis:rastercalculator_3"/>
       <Option type="Map" name="outputs">
         <Option type="Map" name="Topographic Wetness Index">
-          <Option value="qgis:rastercalculator_3" type="QString" name="child_id"/>
-          <Option value="Topographic Wetness Index" type="QString" name="component_description"/>
-          <Option value="1111" type="double" name="component_pos_x"/>
-          <Option value="586" type="double" name="component_pos_y"/>
+          <Option type="QString" name="child_id" value="qgis:rastercalculator_3"/>
+          <Option type="QString" name="color" value=""/>
+          <Option type="Map" name="comment">
+            <Option type="QString" name="color" value=""/>
+            <Option type="QString" name="component_description" value=""/>
+            <Option type="double" name="component_height" value="30"/>
+            <Option type="double" name="component_pos_x" value="0"/>
+            <Option type="double" name="component_pos_y" value="0"/>
+            <Option type="double" name="component_width" value="200"/>
+            <Option type="bool" name="outputs_collapsed" value="false"/>
+            <Option type="bool" name="parameters_collapsed" value="false"/>
+          </Option>
+          <Option type="QString" name="component_description" value="Topographic Wetness Index"/>
+          <Option type="double" name="component_height" value="30"/>
+          <Option type="double" name="component_pos_x" value="1111"/>
+          <Option type="double" name="component_pos_y" value="586"/>
+          <Option type="double" name="component_width" value="200"/>
           <Option type="invalid" name="default_value"/>
-          <Option value="false" type="bool" name="mandatory"/>
-          <Option value="Topographic Wetness Index" type="QString" name="name"/>
-          <Option value="OUTPUT" type="QString" name="output_name"/>
+          <Option type="bool" name="mandatory" value="false"/>
+          <Option type="QString" name="name" value="Topographic Wetness Index"/>
+          <Option type="QString" name="output_name" value="OUTPUT"/>
+          <Option type="bool" name="outputs_collapsed" value="false"/>
+          <Option type="bool" name="parameters_collapsed" value="false"/>
         </Option>
       </Option>
-      <Option value="true" type="bool" name="outputs_collapsed"/>
-      <Option value="true" type="bool" name="parameters_collapsed"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
       <Option type="Map" name="params">
         <Option type="List" name="CELLSIZE">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option value="0" type="double" name="static_value"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="double" name="static_value" value="0"/>
           </Option>
         </Option>
         <Option type="List" name="CRS">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
+            <Option type="int" name="source" value="2"/>
             <Option type="invalid" name="static_value"/>
           </Option>
         </Option>
         <Option type="List" name="EXPRESSION">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option value="ln((&quot;'Contributing Area' from algorithm 'Flow accumulation (qm of esp)'@1&quot; + 30 * 30 ) / tan(&quot;'Output' from algorithm 'Convert degrees to radiance'@1&quot;) ) " type="QString" name="static_value"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="ln((&quot;'Contributing Area' from algorithm 'Flow accumulation (qm of esp)'@1&quot; + 30 * 30 ) / tan(&quot;'Output' from algorithm 'Convert degrees to radiance'@1&quot;) ) "/>
           </Option>
         </Option>
         <Option type="List" name="EXTENT">
           <Option type="Map">
-            <Option value="qgis:rastercalculator_2" type="QString" name="child_id"/>
-            <Option value="OUTPUT" type="QString" name="output_name"/>
-            <Option value="1" type="int" name="source"/>
+            <Option type="QString" name="child_id" value="qgis:rastercalculator_2"/>
+            <Option type="QString" name="output_name" value="OUTPUT"/>
+            <Option type="int" name="source" value="1"/>
           </Option>
         </Option>
         <Option type="List" name="LAYERS">
           <Option type="Map">
-            <Option value="saga:flowaccumulationqmofesp_1" type="QString" name="child_id"/>
-            <Option value="FLOW" type="QString" name="output_name"/>
-            <Option value="1" type="int" name="source"/>
+            <Option type="QString" name="child_id" value="saga:flowaccumulationqmofesp_1"/>
+            <Option type="QString" name="output_name" value="FLOW"/>
+            <Option type="int" name="source" value="1"/>
           </Option>
           <Option type="Map">
-            <Option value="qgis:rastercalculator_2" type="QString" name="child_id"/>
-            <Option value="OUTPUT" type="QString" name="output_name"/>
-            <Option value="1" type="int" name="source"/>
+            <Option type="QString" name="child_id" value="qgis:rastercalculator_2"/>
+            <Option type="QString" name="output_name" value="OUTPUT"/>
+            <Option type="int" name="source" value="1"/>
           </Option>
         </Option>
       </Option>
     </Option>
     <Option type="Map" name="qgis:slope_1">
-      <Option value="true" type="bool" name="active"/>
+      <Option type="bool" name="active" value="true"/>
       <Option name="alg_config"/>
-      <Option value="qgis:slope" type="QString" name="alg_id"/>
-      <Option value="Slope" type="QString" name="component_description"/>
-      <Option value="223" type="double" name="component_pos_x"/>
-      <Option value="242" type="double" name="component_pos_y"/>
+      <Option type="QString" name="alg_id" value="qgis:slope"/>
+      <Option type="QString" name="color" value=""/>
+      <Option type="Map" name="comment">
+        <Option type="QString" name="color" value=""/>
+        <Option type="QString" name="component_description" value=""/>
+        <Option type="double" name="component_height" value="30"/>
+        <Option type="double" name="component_pos_x" value="0"/>
+        <Option type="double" name="component_pos_y" value="0"/>
+        <Option type="double" name="component_width" value="200"/>
+        <Option type="bool" name="outputs_collapsed" value="false"/>
+        <Option type="bool" name="parameters_collapsed" value="false"/>
+      </Option>
+      <Option type="QString" name="component_description" value="Slope"/>
+      <Option type="double" name="component_height" value="30"/>
+      <Option type="double" name="component_pos_x" value="223"/>
+      <Option type="double" name="component_pos_y" value="242"/>
+      <Option type="double" name="component_width" value="200"/>
       <Option name="dependencies"/>
-      <Option value="qgis:slope_1" type="QString" name="id"/>
+      <Option type="QString" name="id" value="qgis:slope_1"/>
       <Option name="outputs"/>
-      <Option value="true" type="bool" name="outputs_collapsed"/>
-      <Option value="true" type="bool" name="parameters_collapsed"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
       <Option type="Map" name="params">
         <Option type="List" name="INPUT">
           <Option type="Map">
-            <Option value="DigitalElevationModel" type="QString" name="parameter_name"/>
-            <Option value="0" type="int" name="source"/>
+            <Option type="QString" name="parameter_name" value="DigitalElevationModel"/>
+            <Option type="int" name="source" value="0"/>
           </Option>
         </Option>
         <Option type="List" name="Z_FACTOR">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option value="1" type="double" name="static_value"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="double" name="static_value" value="1"/>
           </Option>
         </Option>
       </Option>
     </Option>
     <Option type="Map" name="saga:flowaccumulationqmofesp_1">
-      <Option value="true" type="bool" name="active"/>
+      <Option type="bool" name="active" value="true"/>
       <Option name="alg_config"/>
-      <Option value="saga:flowaccumulationqmofesp" type="QString" name="alg_id"/>
-      <Option value="Flow accumulation (qm of esp)" type="QString" name="component_description"/>
-      <Option value="691" type="double" name="component_pos_x"/>
-      <Option value="128" type="double" name="component_pos_y"/>
+      <Option type="QString" name="alg_id" value="saga:flowaccumulationqmofesp"/>
+      <Option type="QString" name="color" value=""/>
+      <Option type="Map" name="comment">
+        <Option type="QString" name="color" value=""/>
+        <Option type="QString" name="component_description" value=""/>
+        <Option type="double" name="component_height" value="30"/>
+        <Option type="double" name="component_pos_x" value="0"/>
+        <Option type="double" name="component_pos_y" value="0"/>
+        <Option type="double" name="component_width" value="200"/>
+        <Option type="bool" name="outputs_collapsed" value="false"/>
+        <Option type="bool" name="parameters_collapsed" value="false"/>
+      </Option>
+      <Option type="QString" name="component_description" value="Flow accumulation (qm of esp)"/>
+      <Option type="double" name="component_height" value="30"/>
+      <Option type="double" name="component_pos_x" value="691"/>
+      <Option type="double" name="component_pos_y" value="128"/>
+      <Option type="double" name="component_width" value="200"/>
       <Option name="dependencies"/>
-      <Option value="saga:flowaccumulationqmofesp_1" type="QString" name="id"/>
+      <Option type="QString" name="id" value="saga:flowaccumulationqmofesp_1"/>
       <Option name="outputs"/>
-      <Option value="true" type="bool" name="outputs_collapsed"/>
-      <Option value="true" type="bool" name="parameters_collapsed"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
       <Option type="Map" name="params">
         <Option type="List" name="DEM">
           <Option type="Map">
-            <Option value="DigitalElevationModel" type="QString" name="parameter_name"/>
-            <Option value="0" type="int" name="source"/>
+            <Option type="QString" name="parameter_name" value="DigitalElevationModel"/>
+            <Option type="int" name="source" value="0"/>
           </Option>
         </Option>
         <Option type="List" name="DZFILL">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option value="0.01" type="double" name="static_value"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="double" name="static_value" value="0.01"/>
           </Option>
         </Option>
         <Option type="List" name="PREPROC">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option value="1" type="int" name="static_value"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="int" name="static_value" value="1"/>
           </Option>
         </Option>
       </Option>
     </Option>
   </Option>
-  <Option name="help"/>
+  <Option name="designerParameterValues"/>
+  <Option name="groupBoxes"/>
+  <Option type="Map" name="help">
+    <Option type="QString" name="ALG_CREATOR" value="Hans van der Kwast"/>
+    <Option type="QString" name="ALG_DESC" value="Calculates the Topographic Wetness Index (TWI) from a Digital Elevation Model"/>
+    <Option type="QString" name="ALG_HELP_CREATOR" value="Hans van der Kwast"/>
+    <Option type="QString" name="ALG_VERSION" value="1.0"/>
+    <Option type="QString" name="DigitalElevationModel" value="DEM raster layer. Don't use a GCS."/>
+    <Option type="QString" name="HELP_URL" value="https://courses.gisopencourseware.org/mod/book/view.php?id=41"/>
+    <Option type="QString" name="qgis:rastercalculator_3:Topographic Wetness Index" value="Output TWI raster layer"/>
+  </Option>
   <Option name="modelVariables"/>
-  <Option value="Hydrology" type="QString" name="model_group"/>
-  <Option value="Topographic Wetness Index" type="QString" name="model_name"/>
+  <Option type="QString" name="model_group" value="Hydrology"/>
+  <Option type="QString" name="model_name" value="Topographic Wetness Index"/>
   <Option type="Map" name="parameterDefinitions">
     <Option type="Map" name="DigitalElevationModel">
       <Option type="invalid" name="default"/>
-      <Option value="Digital Elevation Model" type="QString" name="description"/>
-      <Option value="0" type="int" name="flags"/>
+      <Option type="invalid" name="defaultGui"/>
+      <Option type="QString" name="description" value="Digital Elevation Model"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option type="QString" name="help" value=""/>
       <Option name="metadata"/>
-      <Option value="DigitalElevationModel" type="QString" name="name"/>
-      <Option value="raster" type="QString" name="parameter_type"/>
+      <Option type="QString" name="name" value="DigitalElevationModel"/>
+      <Option type="QString" name="parameter_type" value="raster"/>
     </Option>
     <Option type="Map" name="qgis:rastercalculator_3:Topographic Wetness Index">
-      <Option value="true" type="bool" name="create_by_default"/>
+      <Option type="bool" name="create_by_default" value="true"/>
       <Option type="invalid" name="default"/>
-      <Option value="Topographic Wetness Index" type="QString" name="description"/>
-      <Option value="0" type="int" name="flags"/>
+      <Option type="invalid" name="defaultGui"/>
+      <Option type="QString" name="description" value="Topographic Wetness Index"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option type="QString" name="help" value=""/>
       <Option name="metadata"/>
-      <Option value="qgis:rastercalculator_3:Topographic Wetness Index" type="QString" name="name"/>
-      <Option value="rasterDestination" type="QString" name="parameter_type"/>
-      <Option value="true" type="bool" name="supports_non_file_outputs"/>
+      <Option type="QString" name="name" value="qgis:rastercalculator_3:Topographic Wetness Index"/>
+      <Option type="QString" name="parameter_type" value="rasterDestination"/>
+      <Option type="bool" name="supports_non_file_outputs" value="true"/>
     </Option>
   </Option>
+  <Option name="parameterOrder"/>
   <Option type="Map" name="parameters">
     <Option type="Map" name="DigitalElevationModel">
-      <Option value="DigitalElevationModel" type="QString" name="component_description"/>
-      <Option value="203" type="double" name="component_pos_x"/>
-      <Option value="97" type="double" name="component_pos_y"/>
-      <Option value="DigitalElevationModel" type="QString" name="name"/>
+      <Option type="QString" name="color" value=""/>
+      <Option type="Map" name="comment">
+        <Option type="QString" name="color" value=""/>
+        <Option type="QString" name="component_description" value=""/>
+        <Option type="double" name="component_height" value="30"/>
+        <Option type="double" name="component_pos_x" value="0"/>
+        <Option type="double" name="component_pos_y" value="0"/>
+        <Option type="double" name="component_width" value="200"/>
+        <Option type="bool" name="outputs_collapsed" value="false"/>
+        <Option type="bool" name="parameters_collapsed" value="false"/>
+      </Option>
+      <Option type="QString" name="component_description" value="DigitalElevationModel"/>
+      <Option type="double" name="component_height" value="30"/>
+      <Option type="double" name="component_pos_x" value="203"/>
+      <Option type="double" name="component_pos_y" value="97"/>
+      <Option type="double" name="component_width" value="200"/>
+      <Option type="QString" name="name" value="DigitalElevationModel"/>
+      <Option type="bool" name="outputs_collapsed" value="false"/>
+      <Option type="bool" name="parameters_collapsed" value="false"/>
     </Option>
   </Option>
 </Option>
