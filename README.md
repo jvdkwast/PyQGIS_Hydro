@@ -10,5 +10,7 @@ The processing script has an improved interface has an option to choose the fiel
 Video for installation: https://youtu.be/e738L1MueeM
 
 Note that with the new dependencies in QGIS this will not work.
+
 For work around see: https://youtu.be/B1LMOOPMWgo
+
 And also see: https://github.com/qgis/QGIS/issues/44514
