@@ -8,8 +8,9 @@ def frange(start, stop, step):
         i += step
 
 # Set the path to your folder and the DTM file
-projectPath = "Z:/advanced/stagevolume"
-inputRasterDEM = "GPKG:Z:/advanced/stagevolume/data_stagevolume.gpkg:DTM"
+current_project = QgsProject.instance()
+projectPath = current_project.homePath()
+inputRasterDEM = "GPKG:" + os.path.join(projectPath,"data_stagevolume.gpkg:DTM")
 demLayer = iface.addRasterLayer(inputRasterDEM,"DEM","gdal")
 
 # Calculate the statistics (min/max) of the DTM
