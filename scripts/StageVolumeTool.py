@@ -103,12 +103,6 @@ class StageVolumeTool(QgsProcessingAlgorithm):
                 self.tr('Output Stage Volume Table')
             )
         )
-
-    def frange(self, start, stop, step):
-        i = start
-        while i < stop:
-            yield i
-            i += step
     
     def processAlgorithm(self, parameters, context, feedback):
         """
@@ -153,11 +147,13 @@ class StageVolumeTool(QgsProcessingAlgorithm):
         print("max:",demMaximum,"m")
         demRange = demMaximum - demMinimum
         print("Elevation Difference:",demRange,"m")
-        increment = demRange / 10.0
+        n_increments = 10
+        increment = demRange / n_increments
         print("Increment:",increment)
-        i = 0
+
+        levels = [demMinimum + i * increment for i in range(n_increments + 1)]
         dbfList = []
-        for level in self.frange(demMinimum,demMaximum + 1,increment):
+        for level in levels:
             outTable = os.path.join(os.path.dirname(outDBF),"volume" + str(round(level*100.0)))
             outTableDbf = str(outTable) + ".dbf"
             processing.run("native:rastersurfacevolume", {'INPUT':demLayer,
