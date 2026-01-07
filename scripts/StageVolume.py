@@ -3,27 +3,27 @@ from qgis.PyQt.QtCore import QVariant
 # Set the path to your folder and the DTM file
 current_project = QgsProject.instance()
 projectPath = current_project.homePath()
-inputRasterDEM = "GPKG:" + os.path.join(projectPath,"data_stagevolume.gpkg:DTM")
-demLayer = iface.addRasterLayer(inputRasterDEM,"DEM","gdal")
+inputRasterDTM = "GPKG:" + os.path.join(projectPath,"data_stagevolume.gpkg:DTM")
+dtmLayer = iface.addRasterLayer(inputRasterDTM,"DTM","gdal")
 
 # Calculate the statistics (min/max) of the DTM
-stats = demLayer.dataProvider().bandStatistics(1)
-demMinimum = stats.minimumValue
-demMaximum = stats.maximumValue
-print("min:",demMinimum,"m")
-print("max:",demMaximum,"m")
+stats = dtmLayer.dataProvider().bandStatistics(1)
+dtmMinimum = stats.minimumValue
+dtmMaximum = stats.maximumValue
+print("min:",dtmMinimum,"m")
+print("max:",dtmMaximum,"m")
 
 # Determine the range
-demRange = demMaximum - demMinimum
-print("Elevation Difference:",demRange,"m")
+dtmRange = dtmMaximum - dtmMinimum
+print("Elevation Difference:",dtmRange,"m")
 
 # Set the increment for the iteration at 10% of the range
 n_increments = 10
-increment = demRange / n_increments
+increment = dtmRange / n_increments
 print("Increment:",increment)
 
 # Create a list of levels to iterate over using list comprehension
-levels = [demMinimum + i * increment for i in range(n_increments + 1)]
+levels = [dtmMinimum + i * increment for i in range(n_increments + 1)]
 
 # Create an empty list for the dbf files
 dbfList = []
@@ -36,7 +36,7 @@ for level in levels:
     
     # Run the raster surface volume tool with the variables
     processing.run("native:rastersurfacevolume", {
-        'INPUT':demLayer,
+        'INPUT':dtmLayer,
         'BAND':1,
         'LEVEL':level,
         'METHOD':1,
@@ -74,3 +74,4 @@ vlayer = QgsVectorLayer(projectPath + 'stagevolume.dbf', "StageVolume", "ogr")
 
 # Add the result to the project
 QgsProject.instance().addMapLayer(vlayer)
+
